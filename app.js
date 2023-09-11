@@ -22,8 +22,8 @@ app.get("/api", (req, res) => {
         "current_day": current_day,
         "utc_time": utc_time,
         "track": track,
-        "github_file_url": "https://github.com/sa-pphire/stage-one/app.js",
-        "github_repo_url": "https://github.com/sa-pphire/stage-one",
+        "github_file_url": "https://github.com/sa-pphire/stage-one/blob/main/app.js",
+        "github_repo_url": "https://github.com/sa-pphire/stage-one/tree/main",
         "status_code": res.statusCode });
   });
 
