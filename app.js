@@ -1,4 +1,8 @@
 const express = require("express");
+const dayjs = require("dayjs");
+const utc = require("dayjs/plugin/utc");
+
+dayjs.extend(utc);
 
 const app = express();
 
@@ -12,7 +16,7 @@ app.get("/api", (req, res) => {
     var track = req.query.track;
     today = new Date()
     var current_day = today.toLocaleDateString('en-US', {weekday: 'long'});
-    var utc_time = today.toISOString();
+    var utc_time = dayjs.utc().format();
     res.json({ 
         "slack_name": slack_name,
         "current_day": current_day,
