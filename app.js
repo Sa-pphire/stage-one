@@ -12,7 +12,7 @@ app.get("/api", (req, res) => {
     var track = req.query.track;
     today = new Date()
     var current_day = today.toLocaleDateString('en-US', {weekday: 'long'});
-    var utc_time = today.toUTCString();
+    var utc_time = today.toISOString();
     res.json({ 
         "slack_name": slack_name,
         "current_day": current_day,
